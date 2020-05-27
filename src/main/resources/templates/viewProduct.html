@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>View Product</title>
+</head>
+<body>
+	<div align="center">
+		<h1>View Product</h1>
+		<br />
+		<a href="/product/logout">Logout</a> <br />
+		<br />
+		<form action="#" th:action="@{/product/updateProduct}"
+			th:object="${updateProductForm}" method="post">
+
+			<table border="0" cellpadding="10">
+
+				<tr>
+					<td>Product Id:</td>
+					<td><input type="text" readonly="readonly" th:field="*{id}" /></td>
+				</tr>
+				<tr>
+					<td>Product Name:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<td>Price:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{price}" /></td>
+				</tr>
+				<tr>
+					<td>Image:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{image}" /></td>
+				</tr>
+				<tr>
+					<td>Description:</td>
+					<td><input type="text" th:field="*{description}" /></td>
+				</tr>
+				<tr>
+					<td>Category:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{category}" /></td>
+				</tr>
+				<tr>
+					<td>Width:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{width}" /></td>
+				</tr>
+
+				<tr>
+					<td>Height:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{height}" /></td>
+				</tr>
+				<tr>
+					<td>Weight:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{weight}" /></td>
+				</tr>
+				<tr>
+					<td>Quantity:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{quantity}" /></td>
+				</tr>
+				<tr>
+					<td>Shipping Fee:</td>
+					<td><input type="text" readonly="readonly"  th:field="*{shippingFee}" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
